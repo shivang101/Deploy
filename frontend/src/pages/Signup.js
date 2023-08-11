@@ -12,7 +12,7 @@ const Signup = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log(email, password);
+        console.log(email, password, name);
 
         await signup(email, password, name);
         console.log(error);
@@ -34,7 +34,7 @@ const Signup = () => {
                 <label className="text-2xl font-ab mt-8 mb-3">Email address:</label>
                 <input
                     className="text-lg"
-                    type="email"
+                    type=""
                     onChange={(e) => setEmail(e.target.value)}
                     value={email}
                 />
