@@ -64,11 +64,11 @@ const Home = () => {
     }, [dispatch, user])
     //external function which are not defined in the useEffect have to be placed inside the dependencies array, as these functions may update state
     console.log(user);
-    console.log(user.user.name);
+    // console.log(user.user.name);
 
     return (
         <div className="home">
-            <h1 className="text-xl font-bold -ml-14"> Welcome back {user.user.name ? user.user.name : ""} !!</h1>
+            {/* <h1 className="text-xl font-bold -ml-14"> Welcome back {user.user.name ? user.user.name : ""} !!</h1> */}
             <div className="grid grid-cols-7">
 
 
