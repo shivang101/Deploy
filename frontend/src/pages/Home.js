@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext"
 import { useAuthContext } from "../hooks/useAuthContext"
 import WorkoutDetails from "../components/WorkoutDetails"
@@ -63,9 +63,14 @@ const Home = () => {
         }
     }, [dispatch, user])
     //external function which are not defined in the useEffect have to be placed inside the dependencies array, as these functions may update state
+    console.log(user);
+    console.log(user.user.name);
+
     return (
         <div className="home">
-            <div className="grid grid-cols-7 my-10">
+            <h1 className="text-xl font-bold -ml-14"> Welcome back {user.user.name ? user.user.name : ""} !!</h1>
+            <div className="grid grid-cols-7">
+
 
                 <div className="col-span-4">
                     {workouts && workouts.map(workout => (
