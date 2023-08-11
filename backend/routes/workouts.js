@@ -10,13 +10,14 @@ const requireAuth = require('../middleware/requireAuth')
 
 const router = express.Router()
 //require auth to prevent 
+router.get('/:id', getWorkout)
+
 router.use(requireAuth)
 
 // GET all workouts
 router.get('/', getWorkouts)
 
 // GET a single workout
-router.get('/:id', getWorkout)
 
 // POST a new workout
 router.post('/', createWorkout)
