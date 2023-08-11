@@ -22,21 +22,20 @@ const Navbar = () => {
                 </div>
                 <nav>
                     {user && (
-                        <div>
-                            <button onClick={handleClick}>Log out</button>
-                            <span>{user.email}</span>
+                        <div className="text-4xl font-f1 mr-16">
+                            <button className='font-f1' onClick={handleClick}>Log out</button>
+                            {/* <span>{user.email}</span> */}
                         </div>
                     )}{
                         !user && (
-
-                            <div className="mr-12">
+                            <div className="flex gap-4 text-4xl mr-16 font-f1">
                                 <Link to="/login">Login</Link>
                                 <Link to="/signup">Signup</Link>
                             </div>
                         )}
                 </nav>
-            </div>
-        </header>
+            </div >
+        </header >
     )
 }
 

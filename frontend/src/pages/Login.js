@@ -41,11 +41,11 @@ const Login = () => {
                 />
 
                 <div className="flex flex-col items-center mt-10">
-                    <button disabled={isLoading} className="text-3xl font-ab rounded-lg">Login In</button>
+                    <button disabled={isLoading} className="text-3xl mb-3 font-f1 rounded-lg">Login In</button>
 
                     {error && <div className="error">{error}</div>}
 
-                    <span className="mt-0">Not Registered with us?
+                    <span className="mt-3">Not Registered with us?
                     </span>
                     <Link className="text-blue-700" to="/signup">Sign Up</Link>
                 </div>

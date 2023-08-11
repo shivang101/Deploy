@@ -29,11 +29,19 @@ header .container {
   justify-content: space-between;
 }
 header a {
-  color: #333;
   text-decoration: none;
 }
 .pages {
-  max-width: 1600px;
+  max-width: 1700px;
   padding: 20px;
   margin: 0 auto;
+}
+button {
+  background: var(--primary);
+  border: 0;
+  color: #fff;
+  padding: 10px;
+  font-family: "Poppins";
+  border-radius: 4px;
+  cursor: pointer;
 }

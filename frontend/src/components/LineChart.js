@@ -6,7 +6,9 @@ export default function LineChart({ chartValues }) {
     console.log("ere");
 
     return (
-        <Line data={chartValues} />
+        <div className='bg-white p-10 w-full h-full'>
+            <Line data={chartValues} />
+        </div>
     )
 
 }

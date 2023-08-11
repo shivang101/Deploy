@@ -47,11 +47,13 @@ const Home = () => {
                 setDataChart({
                     labels: score,
                     datasets: [{
-                        label: 'Confirmed cases',
+                        label: 'progressive Overload',
                         data: score1,
                         backgroundColor: "rgba(255, 99, 132, 0.2)",
-                        borderColor: "black",
+                        borderColor: "rgba(255, 99, 132, 1)",
                         borderWidth: 2,
+                        pointBackgroundColor: "rgba(0,0,0)",
+                        pointBorderColor: "rgba(41, 40, 39)"
                     }]
                 });
             }
@@ -63,19 +65,27 @@ const Home = () => {
     //external function which are not defined in the useEffect have to be placed inside the dependencies array, as these functions may update state
     return (
         <div className="home">
+            <div className="grid grid-cols-7 my-10">
 
-            <Link className="flex flex-row-reverse -mr-16 text-4xl font-f3" to="/form">Add New Workout</Link>
-
-            <div className="grid grid-cols-5">
-
-                <div className="col-span-3">
+                <div className="col-span-4">
                     {workouts && workouts.map(workout => (
                         <WorkoutDetails workout={workout} key={workout._id} />
                     ))}
                 </div>
 
-                <div className="col-span-2 my-auto">
-                    {< LineChart chartValues={dataChart} />}
+                <div className="col-span-3 my-10 items-center">
+                    <div>
+                        {< LineChart chartValues={dataChart} />}
+                        <div className="text-center mt-6 text-3xl">
+                            <span className="font-f3"> Your Progress</span>
+                        </div>
+                        <div className="text-center mt-12 text-3xl ">
+                            <button className="text-3xl rounded-lg">
+                                <Link className="font-f3 text-center" to="/form">Add New Workout</Link>
+                            </button>
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
